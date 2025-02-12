@@ -454,7 +454,7 @@ footer {
   background-image: url("assets/images/home-resources-img.png");
   background-size: cover; /* Cover the entire section */
   background-position: center; /* Center the image */
-  opacity: 0.5; /* Adjust this for background transparency */
+  opacity: 0.9; /* Adjust this for background transparency */
   z-index: 1; /* Place the background below the content */
 }
 .join-movement h2,

@@ -32,6 +32,11 @@
       }
       .card {
         height: 100%;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+      .card:hover {
+        transform: scale(1.05);
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
       }
       .card img {
         height: 200px;
@@ -46,6 +51,34 @@
       }
       .equal-height .card {
         flex-grow: 1;
+      }
+
+      .hero-section {
+        position: relative;
+        text-align: center;
+        color: white;
+        padding: 50px 0;
+      }
+      .hero-section video {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        z-index: -1;
+      }
+      .hero-section .content {
+        background-color: rgba(0, 0, 0, 0.5);
+        padding: 20px;
+      }
+      .section-title {
+        font-size: 2rem;
+        font-weight: bold;
+        margin-bottom: 1.5rem;
+      }
+      .container {
+        max-width: 1140px;
       }
     </style>
   </head>
@@ -104,161 +137,120 @@
     </section>
 
     <!-- About Us Section -->
-    <section class="container my-5 text-center">
-      <h2>About Us</h2>
-      <p>
+    <section id="about" class="container my-5 text-center">
+      <h2 class="section-title">About Us</h2>
+      <h3>
         Ethica is committed to promoting ethical practices in artificial
         intelligence. Our team is dedicated to providing resources, research,
-        and insights that ensure responsible AI development and deployment.
-      </p>
+        and insights that ensure responsible AI development and deployment. We
+        believe that AI should be developed with a strong ethical foundation to
+        create positive and equitable outcomes for society. Our mission is to
+        provide the tools and knowledge necessary for organizations and
+        individuals to make responsible decisions regarding AI.
+      </h3>
+      <h3>
+        Through collaborations with industry leaders, academic institutions, and
+        thought leaders, we strive to advance the understanding of AI ethics. We
+        offer a variety of resources including guidelines, tools, and frameworks
+        to help organizations implement ethical AI practices in their projects.
+      </h3>
     </section>
 
-    <!-- Stats Section -->
-    <section class="stats text-center my-5">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-4">
-            <h2>2800+</h2>
-            <p>Projects Completed</p>
-          </div>
-          <div class="col-md-4">
-            <h2>140+</h2>
-            <p>Clients Served</p>
-          </div>
-          <div class="col-md-4">
-            <h2>4</h2>
-            <p>Amazing Team Members</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Mission Section -->
-    <section class="mission text-center my-5">
-      <div class="container">
-        <h2>Our Mission</h2>
-        <p>
-          At Ethica, we strive to promote ethical AI practices. Our mission is
-          to provide innovative solutions that ensure fairness, transparency,
-          and accountability in AI technology.
-        </p>
-      </div>
-    </section>
-
-    <!-- Values Section -->
-    <section class="values text-center my-5">
-      <div class="container">
-        <h2>Our Values</h2>
-        <ul class="list-unstyled">
-          <li>Integrity</li>
-          <li>Innovation</li>
-          <li>Collaboration</li>
-          <li>Transparency</li>
-          <li>Excellence</li>
-        </ul>
-      </div>
-    </section>
-
-    <!-- Team Section -->
-    <section class="container my-5">
-      <h2 class="text-center mb-4">Our Team</h2>
+    <!-- Resources Section -->
+    <section id="resources" class="container my-5">
+      <h2 class="section-title text-center">Our Team</h2>
       <div class="row">
-        <!-- Team Member 1 -->
+        <!-- Resource 1 -->
         <div class="col-md-3 mb-4">
-          <div class="card team-member">
+          <div class="card">
             <img
-              src="assets/images/team1.jpg"
+              src="assets/images/img-2.jpg"
               class="card-img-top"
-              alt="Team Member 1"
+              alt="Resource 1"
             />
-            <div class="card-body text-center">
-              <h5 class="card-title">Alice Smith</h5>
-              <p class="card-text">AI Ethics Specialist</p>
-              <div class="social-icons">
-                <a href="#"><i class="fab fa-facebook-f"></i></a>
-                <a href="#"><i class="fab fa-twitter"></i></a>
-                <a href="#"><i class="fab fa-linkedin-in"></i></a>
-              </div>
+            <div class="card-body">
+              <h5 class="card-title">AI Ethics Guidelines</h5>
+              <h5 class="card-text">
+                An in-depth guide on ethical AI practices.
+              </h5>
+              <br />
+              <a href="#" class="btn btn-primary">Read More</a>
+            </div>
+          </div>
+        </div>
+        <!-- Resource 2 -->
+        <div class="col-md-3 mb-4">
+          <div class="card">
+            <img
+              src="assets/images/img-2.jpg"
+              class="card-img-top"
+              alt="Resource 2"
+            />
+            <div class="card-body">
+              <h5 class="card-title">AI Transparency Tools</h5>
+              <h5 class="card-text">
+                Tools to help ensure transparency in AI models.
+              </h5>
+              <br />
+              <a href="#" class="btn btn-primary">Read More</a>
+            </div>
+          </div>
+        </div>
+        <!-- Resource 3 -->
+        <div class="col-md-3 mb-4">
+          <div class="card">
+            <img
+              src="assets/images/img-2.jpg"
+              class="card-img-top"
+              alt="Resource 3"
+            />
+            <div class="card-body">
+              <h5 class="card-title">AI Accountability Framework</h5>
+              <h5 class="card-text">
+                Learn how to hold AI systems accountable.
+              </h5>
+              <br />
+              <a href="#" class="btn btn-primary">Read More</a>
             </div>
           </div>
         </div>
 
-        <!-- Team Member 2 -->
+        <!-- Resource 4 -->
         <div class="col-md-3 mb-4">
-          <div class="card team-member">
+          <div class="card">
             <img
-              src="assets/images/team2.jpg"
+              src="assets/images/img-2.jpg"
               class="card-img-top"
-              alt="Team Member 2"
+              alt="Resource 4"
             />
-            <div class="card-body text-center">
-              <h5 class="card-title">John Doe</h5>
-              <p class="card-text">Data Scientist</p>
-              <div class="social-icons">
-                <a href="#"><i class="fab fa-facebook-f"></i></a>
-                <a href="#"><i class="fab fa-twitter"></i></a>
-                <a href="#"><i class="fab fa-linkedin-in"></i></a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Team Member 3 -->
-        <div class="col-md-3 mb-4">
-          <div class="card team-member">
-            <img
-              src="assets/images/team3.jpg"
-              class="card-img-top"
-              alt="Team Member 3"
-            />
-            <div class="card-body text-center">
-              <h5 class="card-title">Emma Johnson</h5>
-              <p class="card-text">Product Manager</p>
-              <div class="social-icons">
-                <a href="#"><i class="fab fa-facebook-f"></i></a>
-                <a href="#"><i class="fab fa-twitter"></i></a>
-                <a href="#"><i class="fab fa-linkedin-in"></i></a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Team Member 4 -->
-        <div class="col-md-3 mb-4">
-          <div class="card team-member">
-            <img
-              src="assets/images/team4.jpg"
-              class="card-img-top"
-              alt="Team Member 4"
-            />
-            <div class="card-body text-center">
-              <h5 class="card-title">Michael Brown</h5>
-              <p class="card-text">Software Engineer</p>
-              <div class="social-icons">
-                <a href="#"><i class="fab fa-facebook-f"></i></a>
-                <a href="#"><i class="fab fa-twitter"></i></a>
-                <a href="#"><i class="fab fa-linkedin-in"></i></a>
-              </div>
+            <div class="card-body">
+              <h5 class="card-title">AI Accountability Framework</h5>
+              <h5 class="card-text">
+                Learn how to hold AI systems accountable.
+              </h5>
+              <br />
+              <a href="#" class="btn btn-primary">Read More</a>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <footer>
+    <!-- Footer -->
+    <footer class="footer">
       <div class="container">
-        <div class="footer-content">
-          <div class="footer-section">
+        <div class="d-flex justify-content-between">
+          <div>
             <h4>Quick Links</h4>
             <ul>
-              <li><a href="#">Home</a></li>
-              <li><a href="#">Principles</a></li>
-              <li><a href="#">Case Studies</a></li>
-              <li><a href="#">Resources</a></li>
-              <li><a href="#">About Us</a></li>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="principles.html">Principles</a></li>
+              <li><a href="case-studies.html">Case Studies</a></li>
+              <li><a href="resources.html">Resources</a></li>
+              <li><a href="team.html">About Us</a></li>
             </ul>
           </div>
-          <div class="footer-section">
+          <div>
             <h4>Contact Us</h4>
             <ul>
               <li><a href="mailto:info@ethica.ai">info@ethica.ai</a></li>
@@ -273,7 +265,7 @@
           </div>
         </div>
 
-        <div class="copyright">
+        <div class="text-center mt-4">
           <p>&copy; 2025 Ethica. All rights reserved.</p>
         </div>
       </div>

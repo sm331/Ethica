@@ -32,40 +32,24 @@
       }
       .card {
         height: 100%;
-        border: none;
-        border-radius: 10px;
-        transition: transform 0.3s, box-shadow 0.3s;
-      }
-      .card:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
       }
       .card img {
         height: 200px;
         object-fit: cover;
-        border-top-left-radius: 10px;
-        border-top-right-radius: 10px;
       }
+      /* Other styles remain unchanged */
       .equal-height {
         display: flex;
         flex-wrap: wrap;
+        justify-content: center; /* Centering the cards */
       }
       .equal-height .col {
-        display: flex;
-      }
-      .equal-height .card {
-        flex-grow: 1;
-      }
-
-      .card-title {
-        color: #007bff;
-      }
-      .card-text {
-        color: #555;
+        display: block; /* Ensure it behaves like a block for centering */
+        flex: 0 0 auto; /* Prevent flex-grow */
       }
     </style>
   </head>
-  <body>
+  <body class="bg-gray-100 dark-mode">
     <!-- Header -->
     <header class="bg-dark py-3">
       <div class="container d-flex justify-content-between align-items-center">
@@ -111,90 +95,89 @@
         <source src="assets/videos/hero-video.mov" type="video/mp4" />
       </video>
       <div class="relative bg-black bg-opacity-50 p-20">
-        <h1 class="text-5xl font-bold">AI Ethics Case Studies</h1>
+        <h1 class="text-5xl font-bold">Responsible AI Case Studies</h1>
       </div>
     </section>
 
-    <!-- Case Studies Section -->
-    <section class="container py-5">
-      <div class="row equal-height">
-        <!-- Case Study 1 -->
-        <div class="col-md-6 mb-4">
-          <div class="card">
+    <!-- Resources Section -->
+    <div class="container py-5">
+      <div class="row row-cols-1 row-cols-md-2 g-4 equal-height">
+        <!-- Resource 1 -->
+        <div class="col">
+          <div class="card shadow">
             <img
-              src="assets/images/img-2.jpg"
+              src="assets/images/home-resources-img.png"
               class="card-img-top"
-              alt="Case Study 1"
+              alt="AI Ethics"
             />
             <div class="card-body">
-              <h5 class="card-title">Bias in Hiring Algorithms</h5>
-              <p class="card-text">
+              <h3 class="card-title">Bias in Hiring Algorithms</h3>
+              <h4 class="card-text">
                 <strong>The Challenge:</strong> A major tech company used
                 AI-powered hiring software that showed bias against female
                 applicants.
-              </p>
-              <p class="card-text">
+              </h4>
+              <h4 class="card-text">
                 <strong>Potential Harms:</strong> Unfair hiring practices,
                 gender discrimination, and legal risks.
-              </p>
-              <p class="card-text">
+              </h4>
+              <h4 class="card-text">
                 <strong>The Solution:</strong> Implemented fairness audits,
                 improved training data diversity, and added human oversight.
-              </p>
-              <p class="card-text">
+              </h4>
+              <h4 class="card-text">
                 <strong>Key Takeaways:</strong> AI should be regularly tested
                 for bias, and human decision-making should complement automated
                 systems.
-              </p>
+              </h4>
             </div>
           </div>
         </div>
 
-        <!-- Case Study 2 -->
-        <div class="col-md-6 mb-4">
-          <div class="card">
+        <!-- Resource 2 -->
+        <div class="col">
+          <div class="card shadow">
             <img
-              src="assets/images/img-3.jpg"
+              src="assets/images/img-2.jpg"
               class="card-img-top"
-              alt="Case Study 2"
+              alt="AI in Healthcare"
             />
             <div class="card-body">
-              <h5 class="card-title">Facial Recognition and Privacy</h5>
-              <p class="card-text">
+              <h3 class="card-title">Facial Recognition and Privacy</h3>
+              <h4 class="card-text">
                 <strong>The Challenge:</strong> A government agency deployed
                 facial recognition AI for security but raised concerns about
                 privacy violations.
-              </p>
-              <p class="card-text">
+              </h4>
+              <h4 class="card-text">
                 <strong>Potential Harms:</strong> Privacy invasion, wrongful
                 identification, and surveillance overreach.
-              </p>
-              <p class="card-text">
+              </h4>
+              <h4 class="card-text">
                 <strong>The Solution:</strong> Introduced transparency policies,
                 gave users opt-out options, and enforced strict data usage
                 guidelines.
-              </p>
-              <p class="card-text">
+              </h4>
+              <h4 class="card-text">
                 <strong>Key Takeaways:</strong> AI policies should be
                 transparent, and users should have control over their data.
-              </p>
+              </h4>
             </div>
           </div>
         </div>
       </div>
-    </section>
-
+    </div>
     <footer>
       <div class="container">
         <div class="footer-content">
           <div class="footer-section">
             <h4>Quick Links</h4>
             <ul>
-              <li><a href="#">Home</a></li>
-              <li><a href="#">Principles</a></li>
-              <li><a href="#">Case Studies</a></li>
-              <li><a href="#">Resources</a></li>
-              <li><a href="#">About Us</a></li>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="principles.html">Principles</a></li>
+              <li><a href="case-studies.html">Case Studies</a></li>
+              <li><a href="resources.html">Resources</a></li>
+              <li><a href="team.html">About Us</a></li>
             </ul>
           </div>
           <div class="footer-section">
