@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ethica - AI Ethics Education</title>
+
+    <link rel="stylesheet" href="./styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <nav>
+          <a href="index.html" class="logo">
+            <img src="assets/images/white-logo.png" alt="Ethica Logo" />
+          </a>
+          <button class="menu-toggle">
+            <i class="fas fa-bars"></i>
+          </button>
+          <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="principles.html">Principles of Responsible AI</a></li>
+            <li><a href="case-studies.html">Case Studies</a></li>
+            <li><a href="resources.html">Resources</a></li>
+            <li><a href="team.html">About Us</a></li>
+          </ul>
+          <button class="theme-toggle">
+            <i class="fas fa-moon"></i>
+          </button>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      {% block content %}
+      <!-- Page-specific content will be injected here -->
+      {% endblock %}
+    </main>
+
+    <footer>
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-section">
+            <h4>Quick Links</h4>
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="principles.html">Principles</a></li>
+              <li><a href="case-studies.html">Case Studies</a></li>
+              <li><a href="resources.html">Resources</a></li>
+              <li><a href="team.html">About Us</a></li>
+            </ul>
+          </div>
+          <div class="footer-section">
+            <h4>Contact Us</h4>
+            <ul>
+              <li><a href="mailto:info@ethica.ai">info@ethica.ai</a></li>
+              <li><a href="tel:+1234567890">+1 (234) 567-890</a></li>
+            </ul>
+            <div class="social-icons">
+              <a href="#"><i class="fab fa-facebook-f"></i></a>
+              <a href="#"><i class="fab fa-twitter"></i></a>
+              <a href="#"><i class="fab fa-linkedin-in"></i></a>
+              <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="copyright">
+          <p>&copy; 2025 Ethica. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      // Toggle mobile menu
+      document
+        .querySelector(".menu-toggle")
+        .addEventListener("click", function () {
+          document.querySelector(".nav-links").classList.toggle("active");
+        });
+
+      // Toggle dark/light mode
+      document
+        .querySelector(".theme-toggle")
+        .addEventListener("click", function () {
+          document.body.classList.toggle("light-mode");
+          const icon = this.querySelector("i");
+          if (icon.classList.contains("fa-moon")) {
+            icon.classList.remove("fa-moon");
+            icon.classList.add("fa-sun");
+          } else {
+            icon.classList.remove("fa-sun");
+            icon.classList.add("fa-moon");
+          }
+        });
+
+      // Carousel functionality (if applicable)
+      let currentIndex = 0;
+      const items = document.querySelectorAll(".testimonial");
+      const totalItems = items.length;
+
+      document.getElementById("nextBtn").addEventListener("click", function () {
+        currentIndex = (currentIndex + 1) % totalItems;
+        updateCarousel();
+      });
+
+      document.getElementById("prevBtn").addEventListener("click", function () {
+        currentIndex = (currentIndex - 1 + totalItems) % totalItems;
+        updateCarousel();
+      });
+
+      function updateCarousel() {
+        const carouselInner = document.getElementById("carouselInner");
+        const offset = -currentIndex * 100;
+        carouselInner.style.transform = `translateX(${offset}%)`;
+      }
+    </script>
+  </body>
+</html>

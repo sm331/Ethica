@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ethica - AI Ethics Education</title>
+
+    <link rel="stylesheet" href="./styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f4f4f4; /* Light mode background */
+        color: #333; /* Light mode text color */
+        transition: background-color 0.3s, color 0.3s;
+      }
+
+      body.light-mode {
+        background-color: #ffffff; /* Light mode background */
+        color: #333;
+      }
+
+      body.dark-mode {
+        background-color: #121212; /* Dark mode background */
+        color: #ffffff; /* Dark mode text color */
+      }
+
+      .container {
+        width: 90%;
+        margin: auto;
+        overflow: hidden;
+      }
+
+      header {
+        background: #333;
+        color: #fff;
+        padding: 10px 0;
+      }
+
+      nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .nav-links {
+        list-style: none;
+        display: flex;
+      }
+
+      .nav-links li {
+        margin-left: 20px;
+      }
+
+      .nav-links a {
+        color: #fff;
+        text-decoration: none;
+      }
+
+      .menu-toggle {
+        display: none; /* Hidden by default */
+      }
+
+      footer {
+        background: #333;
+        color: #fff;
+        padding: 20px 0;
+        margin-top: 20px;
+      }
+
+      .footer-content {
+        display: flex;
+        justify-content: space-between;
+      }
+
+      .footer-section {
+        flex: 1;
+        padding: 10px;
+      }
+
+      /* Styles for the boxes */
+      .box-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin: 20px 0;
+      }
+
+      .box {
+        background: linear-gradient(
+          135deg,
+          #6a5acd 0%,
+          #00bfff 100%
+        ); /* Gradient background */
+        border-radius: 12px; /* Rounded corners */
+        padding: 20px;
+        margin: 10px;
+        flex: 1 1 calc(30% - 20px); /* Responsive sizing */
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        transition: transform 0.3s; /* Smooth transition */
+        color: white; /* Text color */
+      }
+
+      .box:hover {
+        transform: scale(1.05);
+      }
+
+      body.dark-mode .box {
+        background: linear-gradient(135deg, #4b0082 0%, #1e90ff 100%);
+        color: #ffffff; /* Dark mode text color */
+      }
+
+      /* Responsive styles */
+      @media (max-width: 768px) {
+        .nav-links {
+          display: none; /* Hide links on mobile */
+          flex-direction: column; /* Stack links */
+        }
+
+        .menu-toggle {
+          display: block; /* Show menu toggle */
+        }
+
+        .box {
+          flex: 1 1 100%; /* Full width for boxes on mobile */
+        }
+      }
+
+      /* Light and Dark mode toggle styles */
+      .theme-toggle {
+        background: none;
+        border: none;
+        cursor: pointer;
+        color: #fff; /* Toggle button color */
+      }
+
+      body.light-mode .theme-toggle {
+        color: #333; /* Toggle button color in light mode */
+      }
+
+      body.dark-mode footer {
+        background: #1e1e1e; /* Dark mode footer background */
+      }
+
+      body.light-mode footer {
+        background: #333; /* Light mode footer background */
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <nav>
+          <a href="index.html" class="logo">
+            <img src="assets/images/white-logo.png" alt="Ethica Logo" />
+          </a>
+          <button class="menu-toggle">
+            <i class="fas fa-bars"></i>
+          </button>
+          <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="principles.html">Principles of Responsible AI</a></li>
+            <li><a href="case-studies.html">Case Studies</a></li>
+            <li><a href="resources.html">Resources</a></li>
+            <li><a href="team.html">About Us</a></li>
+          </ul>
+          <button class="theme-toggle">
+            <i class="fas fa-moon"></i>
+          </button>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <div class="container">
+        <h1>What Are The Principles?</h1>
+        <div class="box-container">
+          <div class="box">
+            <h3>Fairness</h3>
+            <p>Ensuring equitable treatment for all users.</p>
+            <p>✅ Avoid bias in data and algorithms.</p>
+            <p>
+              We strive for algorithms that do not favor one group over another.
+            </p>
+          </div>
+        
+            <div class="box" />
+            <h3>Transparency</h3>
+            <p>Clear visibility into how algorithms make decisions.</p>
+            <p>✅ Users should understand AI behaviors.</p>
+            <p>
+              We provide clear documentation and disclosure of AI processes.
+            </p>
+          </div>
+          <div class="box">
+            <h3>Accountability</h3>
+            <p>Responsibility for decisions made by AI.</p>
+            <p>✅ Clear lines of accountability in AI systems.</p>
+            <p>
+              We ensure that every decision can be traced back to a responsible
+              entity.
+            </p>
+          </div>
+          <div class="box">
+            <h3>Privacy</h3>
+            <p>Respecting user data and privacy well.</p>
+            <p>✅ Minimize data collection.</p>
+            <p>
+              We implement strong privacy measures to protect user information.
+            </p>
+          </div>
+          <div class="box">
+            <h3>Security</h3>
+            <p>Protecting user data from unauthorized access.</p>
+            <p>✅ Implement strong security measures.</p>
+            <p>
+              We utilize encryption and other technologies to safeguard data.
+            </p>
+          </div>
+          <div class="box">
+            <h3>Human-Centric</h3>
+            <p>AI should enhance human capabilities, not replace them.</p>
+            <p>✅ Focus on user benefits and experiences.</p>
+            <p>
+              We prioritize designs that empower users and enrich their lives.
+            </p>
+          </div>
+          <div class="box">
+            <h3>Reliability</h3>
+            <p>AI systems should perform consistently and reliably.</p>
+            <p>✅ Continuous testing and improvement.</p>
+            <p>
+              We ensure our systems are rigorously tested before deployment.
+            </p>
+          </div>
+          <div class="box">
+            <h3>Inclusivity</h3>
+            <p>
+              AI should be accessible to all users, regardless of background.
+            </p>
+            <p>✅ Design for diverse user needs.</p>
+            <p>
+              We consider all user perspectives to create inclusive solutions.
+            </p>
+          </div>
+          <div class="box">
+            <h3>Sustainability</h3>
+            <p>Promoting environmentally friendly practices in AI.</p>
+            <p>✅ Reduce carbon footprint.</p>
+            <p>
+              We aim to create AI solutions that are energy-efficient and
+              sustainable.
+            </p>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-section">
+            <h4>Quick Links</h4>
+            <ul>
+              <li><a href="#">Home</a></li>
+              <li><a href="#">Principles</a></li>
+              <li><a href="#">Case Studies</a></li>
+              <li><a href="#">Resources</a></li>
+              <li><a href="#">About Us</a></li>
+            </ul>
+          </div>
+          <div class="footer-section">
+            <h4>Contact Us</h4>
+            <ul>
+              <li><a href="mailto:info@ethica.ai">info@ethica.ai</a></li>
+              <li><a href="tel:+1234567890">+1 (234) 567-890</a></li>
+            </ul>
+            <div class="social-icons">
+              <a href="#"><i class="fab fa-facebook-f"></i></a>
+              <a href="#"><i class="fab fa-twitter"></i></a>
+              <a href="#"><i class="fab fa-linkedin-in"></i></a>
+              <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="copyright">
+          <p>&copy; 2025 Ethica. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      // Toggle mobile menu
+      document
+        .querySelector(".menu-toggle")
+        .addEventListener("click", function () {
+          document.querySelector(".nav-links").classList.toggle("active");
+        });
+
+      // Toggle dark/light mode
+      document
+        .querySelector(".theme-toggle")
+        .addEventListener("click", function () {
+          document.body.classList.toggle("light-mode");
+          const icon = this.querySelector("i");
+          if (icon.classList.contains("fa-moon")) {
+            icon.classList.remove("fa-moon");
+            icon.classList.add("fa-sun");
+          } else {
+            icon.classList.remove("fa-sun");
+            icon.classList.add("fa-moon");
+          }
+        });
+
+      // Carousel functionality
+      let currentIndex = 0;
+      const items = document.querySelectorAll(".testimonial");
+      const totalItems = items.length;
+
+      document.getElementById("nextBtn").addEventListener("click", function () {
+        currentIndex = (currentIndex + 1) % totalItems;
+        updateCarousel();
+      });
+
+      document.getElementById("prevBtn").addEventListener("click", function () {
+        currentIndex = (currentIndex - 1 + totalItems) % totalItems;
+        updateCarousel();
+      });
+
+      function updateCarousel() {
+        const carouselInner = document.getElementById("carouselInner");
+        const offset = -currentIndex * 100;
+        carouselInner.style.transform = `translateX(${offset}%)`;
+      }
+    </script>
+  </body>
+</html>

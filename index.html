@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ethica - AI Ethics Education</title>
+
+    <link rel="stylesheet" href="./styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <nav>
+          <a href="index.html" class="logo">
+            <img src="assets/images/white-logo.png" alt="Ethica Logo" />
+          </a>
+          <button class="menu-toggle">
+            <i class="fas fa-bars"></i>
+          </button>
+          <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="principles.html">Principles of Responsible AI</a></li>
+            <li><a href="case-studies.html">Case Studies</a></li>
+            <li><a href="resources.html">Resources</a></li>
+            <li><a href="team.html">About Us</a></li>
+          </ul>
+          <button class="theme-toggle">
+            <i class="fas fa-moon"></i>
+          </button>
+        </nav>
+      </div>
+    </header>
+
+    <section class="hero">
+      <div class="video-background">
+        <video autoplay muted loop class="hero-video">
+          <source src="assets/videos/hero-video.mov" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+      </div>
+      <div class="container">
+        <div class="hero-content">
+          <h1>
+            AI is Changing the World <br />
+            Let's Use it Wisely.
+          </h1>
+          <a href="#" class=".explore-btn cta-button">Learn More</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="features">
+      <div class="container">
+        <h2 class="section-title">What you will Learn...</h2>
+        <div class="cards-container">
+          <div class="card">
+            <div class="card-icon">
+              <i class="fas fa-brain" style="color: white; font-size: 36px"></i>
+            </div>
+            <h3>AI Fundamentals</h3>
+            <p>
+              Understand how AI works, its capabilities, and limitations in an
+              accessible, non-technical way.
+            </p>
+          </div>
+          <div class="card">
+            <div class="card-icon">
+              <i
+                class="fas fa-balance-scale"
+                style="color: white; font-size: 36px"
+              ></i>
+            </div>
+            <h3>Ethical Frameworks</h3>
+            <p>
+              Explore various ethical perspectives on AI development and
+              deployment in society.
+            </p>
+          </div>
+          <div class="card">
+            <div class="card-icon">
+              <i
+                class="fas fa-shield-alt"
+                style="color: white; font-size: 36px"
+              ></i>
+            </div>
+            <h3>Responsible Use</h3>
+            <p>
+              Learn practical guidelines for using AI responsibly in various
+              personal and professional contexts.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="resources">
+      <div class="container">
+        <h2 class="section-title">Resources for Learning</h2>
+        <div class="resources-list">
+          <div class="resource-card">
+            <h4>Online Courses</h4>
+            <p>
+              Explore a variety of online courses focused on AI ethics and
+              responsible use.
+            </p>
+          </div>
+          <div class="resource-card">
+            <h4>Webinars</h4>
+            <p>
+              Join our informative webinars featuring industry experts
+              discussing AI trends.
+            </p>
+          </div>
+          <div class="resource-card">
+            <h4>Articles and Blogs</h4>
+            <p>
+              Read articles and blogs that delve into the latest in AI ethics
+              and technology.
+            </p>
+          </div>
+        </div>
+        <a href="resources.html" class="learn-more-button">Learn More</a>
+      </div>
+    </section>
+
+    <section class="join-movement">
+      <h2>Join the Movement.</h2>
+      <p>Become part of a generation that shapes AI for good.</p>
+      <a href="#resources" class="explore-btn">Explore Resources</a>
+    </section>
+
+    <footer>
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-section">
+            <h4>Quick Links</h4>
+            <ul>
+              <li><a href="#">Home</a></li>
+              <li><a href="#">Principles</a></li>
+              <li><a href="#">Case Studies</a></li>
+              <li><a href="#">Resources</a></li>
+              <li><a href="#">About Us</a></li>
+            </ul>
+          </div>
+          <div class="footer-section">
+            <h4>Contact Us</h4>
+            <ul>
+              <li><a href="mailto:info@ethica.ai">info@ethica.ai</a></li>
+              <li><a href="tel:+1234567890">+1 (234) 567-890</a></li>
+            </ul>
+            <div class="social-icons">
+              <a href="#"><i class="fab fa-facebook-f"></i></a>
+              <a href="#"><i class="fab fa-twitter"></i></a>
+              <a href="#"><i class="fab fa-linkedin-in"></i></a>
+              <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="copyright">
+          <p>&copy; 2025 Ethica. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      // Toggle mobile menu
+      document
+        .querySelector(".menu-toggle")
+        .addEventListener("click", function () {
+          document.querySelector(".nav-links").classList.toggle("active");
+        });
+
+      // Toggle dark/light mode
+      document
+        .querySelector(".theme-toggle")
+        .addEventListener("click", function () {
+          document.body.classList.toggle("light-mode");
+          const icon = this.querySelector("i");
+          if (icon.classList.contains("fa-moon")) {
+            icon.classList.remove("fa-moon");
+            icon.classList.add("fa-sun");
+          } else {
+            icon.classList.remove("fa-sun");
+            icon.classList.add("fa-moon");
+          }
+        });
+
+      // Carousel functionality
+      let currentIndex = 0;
+      const items = document.querySelectorAll(".testimonial");
+      const totalItems = items.length;
+
+      document.getElementById("nextBtn").addEventListener("click", function () {
+        currentIndex = (currentIndex + 1) % totalItems;
+        updateCarousel();
+      });
+
+      document.getElementById("prevBtn").addEventListener("click", function () {
+        currentIndex = (currentIndex - 1 + totalItems) % totalItems;
+        updateCarousel();
+      });
+
+      function updateCarousel() {
+        const carouselInner = document.getElementById("carouselInner");
+        const offset = -currentIndex * 100;
+        carouselInner.style.transform = `translateX(${offset}%)`;
+      }
+    </script>
+  </body>
+</html>
