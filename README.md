@@ -92,6 +92,7 @@ The project is structured as follows:
 /ethica
 │
 ├── index.html                 # Landing/Home Page
+├── base.html                 # base html code
 ├── principles.html            # Principles of Responsible AI
 ├── case-studies.html          # Case Studies and Examples
 ├── resources.html             # Resources & Guidelines
