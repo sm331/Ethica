@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ethica - Case Study</title>
+
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <style>
+      .hero {
+        color: #fff;
+        padding: 60px 20px;
+        text-align: center;
+      }
+
+      .case-studies {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 20px;
+        padding: 40px 20px;
+        max-width: 1200px;
+        margin: 20px auto;
+      }
+
+      .case-study {
+        background: #9d4edd; /* Amethyst */
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      }
+
+      .case-study-title {
+        font-size: 28px;
+        margin-bottom: 20px;
+        text-align: center;
+        color: #fff;
+      }
+
+      .case-study-content h3 {
+        color: #fff;
+        margin-top: 20px;
+      }
+
+      .case-study-content p,
+      .case-study-content ul {
+        color: #fff;
+        line-height: 1.6;
+      }
+
+      .case-study-content ul {
+        padding-left: 20px;
+        list-style-type: disc;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <nav>
+          <a href="index.html" class="logo">
+            <img src="assets/images/white-logo.png" alt="Ethica Logo" />
+          </a>
+          <button class="menu-toggle">
+            <i class="fas fa-bars"></i>
+          </button>
+          <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="principles.html">Principles of Responsible AI</a></li>
+            <li><a href="case-studies.html">Case Studies</a></li>
+            <li><a href="resources.html">Resources</a></li>
+            <li><a href="team.html">About Us</a></li>
+          </ul>
+          <button class="theme-toggle">
+            <i class="fas fa-moon"></i>
+          </button>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Hero Section -->
+    <div class="hero">
+      <div class="container">
+        <h1 class="display-4 fw-bold">Ethica Case Studies</h1>
+        <p class="lead">
+          Explore how responsible AI practices are implemented across various
+          industries.
+        </p>
+      </div>
+    </div>
+
+    <section class="case-studies">
+      <div class="case-study">
+        <h2 class="case-study-title">Case Study One</h2>
+        <div class="case-study-content">
+          <h3>The Challenge</h3>
+          <p>
+            A bank implemented AI to reduce transaction delays for customers,
+            but faced challenges with bias in training data, leading to
+            discrimination against certain groups.
+          </p>
+          <h3>Potential Harms</h3>
+          <ul>
+            <li>Bias impacting disadvantaged groups</li>
+            <li>Increased financial transaction errors</li>
+            <li>Trust issues with customers</li>
+          </ul>
+          <h3>The Solution</h3>
+          <p>
+            Use diverse training data to reduce bias and implement regular
+            audits for fairness in AI decisions.
+          </p>
+          <h3>Key Takeaways</h3>
+          <ul>
+            <li>Balance security while ensuring equitable deployment.</li>
+            <li>Engage stakeholders in AI development.</li>
+            <li>Continuously monitor AI outcomes for fairness.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="case-study">
+        <h2 class="case-study-title">Case Study Two</h2>
+        <div class="case-study-content">
+          <h3>The Challenge</h3>
+          <p>
+            An AI system in hiring faced accusations of bias against candidates
+            from specific demographics, impacting the fairness of the hiring
+            process.
+          </p>
+          <h3>Potential Harms</h3>
+          <ul>
+            <li>Reduced diversity in the workforce</li>
+            <li>Legal implications for discriminatory practices</li>
+            <li>Negative public perception of the company</li>
+          </ul>
+          <h3>The Solution</h3>
+          <p>
+            Implement regular audits of the AI algorithm and involve diverse
+            teams in the hiring process.
+          </p>
+          <h3>Key Takeaways</h3>
+          <ul>
+            <li>Regularly review AI systems to ensure fairness.</li>
+            <li>Encourage diverse perspectives in algorithm development.</li>
+            <li>Foster transparency in hiring practices.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-section">
+            <h4>Quick Links</h4>
+            <ul>
+              <li><a href="#">Home</a></li>
+              <li><a href="#">Principles</a></li>
+              <li><a href="#">Case Studies</a></li>
+              <li><a href="#">Resources</a></li>
+              <li><a href="#">About Us</a></li>
+            </ul>
+          </div>
+          <div class="footer-section">
+            <h4>Contact Us</h4>
+            <ul>
+              <li><a href="mailto:info@ethica.ai">info@ethica.ai</a></li>
+              <li><a href="tel:+1234567890">+1 (234) 567-890</a></li>
+            </ul>
+            <div class="social-icons">
+              <a href="#"><i class="fab fa-facebook-f"></i></a>
+              <a href="#"><i class="fab fa-twitter"></i></a>
+              <a href="#"><i class="fab fa-linkedin-in"></i></a>
+              <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="copyright">
+          <p>&copy; 2025 Ethica. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+      // Toggle mobile menu
+      document
+        .querySelector(".menu-toggle")
+        .addEventListener("click", function () {
+          document.querySelector(".nav-links").classList.toggle("active");
+        });
+
+      // Toggle dark/light mode
+      document
+        .querySelector(".theme-toggle")
+        .addEventListener("click", function () {
+          document.body.classList.toggle("light-mode");
+          const icon = this.querySelector("i");
+          if (icon.classList.contains("fa-moon")) {
+            icon.classList.remove("fa-moon");
+            icon.classList.add("fa-sun");
+          } else {
+            icon.classList.remove("fa-sun");
+            icon.classList.add("fa-moon");
+          }
+        });
+    </script>
+  </body>
+</html>
