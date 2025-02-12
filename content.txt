@@ -69,6 +69,7 @@ AI should prioritize human well-being and be designed to enhance human capabilit
 Responsible AI is essential for ensuring that AI technologies contribute positively to society while minimizing risks. By adhering to principles like fairness, transparency, accountability, privacy, safety, and human-centricity, we can build AI systems that are ethical and trustworthy.  
 
 
+reosurces page: https://chatgpt.com/share/67ac4a20-9a40-800f-9b9e-2ca8477e3214
 
 
 
