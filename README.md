@@ -91,7 +91,6 @@ The project is structured as follows:
 │   ├── videos/                # Folder for AI-generated videos
 │   ├── icons/                 # AI-generated icons
 ├── README.md                  # Project documentation
-└── LICENSE                    # License information
 ```
 
 ---
