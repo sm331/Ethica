@@ -3,155 +3,183 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Ethica - Case Study</title>
+    <title>Ethica - Resources</title>
 
+    <!-- Bootstrap & Tailwind -->
     <link
       rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
     />
-    <link rel="stylesheet" href="./styles.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
     />
+    <link rel="stylesheet" href="./styles.css" />
+
     <style>
-      .hero {
-        color: #fff;
-        padding: 60px 20px;
-        text-align: center;
+      body.dark-mode {
+        background-color: #1a202c;
+        color: #f7fafc;
+      }
+      .dark-mode .card {
+        background-color: #2d3748;
+        color: #f7fafc;
+      }
+      .dark-mode .btn-primary {
+        background-color: #4299e1;
+        border-color: #4299e1;
+      }
+      .card {
+        height: 100%;
+        border: none;
+        border-radius: 10px;
+        transition: transform 0.3s, box-shadow 0.3s;
+      }
+      .card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+      }
+      .card img {
+        height: 200px;
+        object-fit: cover;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+      }
+      .equal-height {
+        display: flex;
+        flex-wrap: wrap;
+      }
+      .equal-height .col {
+        display: flex;
+      }
+      .equal-height .card {
+        flex-grow: 1;
       }
 
-      .case-studies {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-        gap: 20px;
-        padding: 40px 20px;
-        max-width: 1200px;
-        margin: 20px auto;
+      .card-title {
+        color: #007bff;
       }
-
-      .case-study {
-        background: #9d4edd; /* Amethyst */
-        padding: 20px;
-        border-radius: 8px;
-        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-      }
-
-      .case-study-title {
-        font-size: 28px;
-        margin-bottom: 20px;
-        text-align: center;
-        color: #fff;
-      }
-
-      .case-study-content h3 {
-        color: #fff;
-        margin-top: 20px;
-      }
-
-      .case-study-content p,
-      .case-study-content ul {
-        color: #fff;
-        line-height: 1.6;
-      }
-
-      .case-study-content ul {
-        padding-left: 20px;
-        list-style-type: disc;
+      .card-text {
+        color: #555;
       }
     </style>
   </head>
   <body>
-    <header>
-      <div class="container">
+    <!-- Header -->
+    <header class="bg-dark py-3">
+      <div class="container d-flex justify-content-between align-items-center">
+        <a href="index.html" class="logo">
+          <img
+            src="assets/images/white-logo.png"
+            alt="Ethica Logo"
+            height="40"
+          />
+        </a>
         <nav>
-          <a href="index.html" class="logo">
-            <img src="assets/images/white-logo.png" alt="Ethica Logo" />
-          </a>
-          <button class="menu-toggle">
-            <i class="fas fa-bars"></i>
-          </button>
-          <ul class="nav-links">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="principles.html">Principles of Responsible AI</a></li>
-            <li><a href="case-studies.html">Case Studies</a></li>
-            <li><a href="resources.html">Resources</a></li>
-            <li><a href="team.html">About Us</a></li>
+          <ul class="nav">
+            <li class="nav-item">
+              <a href="index.html" class="nav-link text-light">Home</a>
+            </li>
+            <li class="nav-item">
+              <a href="principles.html" class="nav-link text-light"
+                >Principles</a
+              >
+            </li>
+            <li class="nav-item">
+              <a href="case-studies.html" class="nav-link text-light"
+                >Case Studies</a
+              >
+            </li>
+            <li class="nav-item">
+              <a href="resources.html" class="nav-link text-light">Resources</a>
+            </li>
+            <li class="nav-item">
+              <a href="team.html" class="nav-link text-light">About Us</a>
+            </li>
           </ul>
-          <button class="theme-toggle">
-            <i class="fas fa-moon"></i>
-          </button>
         </nav>
+        <button id="theme-toggle" class="btn btn-outline-light">
+          <i class="fas fa-moon"></i>
+        </button>
       </div>
     </header>
 
     <!-- Hero Section -->
-    <div class="hero">
-      <div class="container">
-        <h1 class="display-4 fw-bold">Ethica Case Studies</h1>
-        <p class="lead">
-          Explore how responsible AI practices are implemented across various
-          industries.
-        </p>
+    <section class="relative text-center text-white">
+      <video autoplay muted loop class="absolute w-full h-full object-cover">
+        <source src="assets/videos/hero-video.mov" type="video/mp4" />
+      </video>
+      <div class="relative bg-black bg-opacity-50 p-20">
+        <h1 class="text-5xl font-bold">AI Ethics Case Studies</h1>
       </div>
-    </div>
+    </section>
 
-    <section class="case-studies">
-      <div class="case-study">
-        <h2 class="case-study-title">Case Study One</h2>
-        <div class="case-study-content">
-          <h3>The Challenge</h3>
-          <p>
-            A bank implemented AI to reduce transaction delays for customers,
-            but faced challenges with bias in training data, leading to
-            discrimination against certain groups.
-          </p>
-          <h3>Potential Harms</h3>
-          <ul>
-            <li>Bias impacting disadvantaged groups</li>
-            <li>Increased financial transaction errors</li>
-            <li>Trust issues with customers</li>
-          </ul>
-          <h3>The Solution</h3>
-          <p>
-            Use diverse training data to reduce bias and implement regular
-            audits for fairness in AI decisions.
-          </p>
-          <h3>Key Takeaways</h3>
-          <ul>
-            <li>Balance security while ensuring equitable deployment.</li>
-            <li>Engage stakeholders in AI development.</li>
-            <li>Continuously monitor AI outcomes for fairness.</li>
-          </ul>
+    <!-- Case Studies Section -->
+    <section class="container py-5">
+      <div class="row equal-height">
+        <!-- Case Study 1 -->
+        <div class="col-md-6 mb-4">
+          <div class="card">
+            <img
+              src="assets/images/img-2.jpg"
+              class="card-img-top"
+              alt="Case Study 1"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Bias in Hiring Algorithms</h5>
+              <p class="card-text">
+                <strong>The Challenge:</strong> A major tech company used
+                AI-powered hiring software that showed bias against female
+                applicants.
+              </p>
+              <p class="card-text">
+                <strong>Potential Harms:</strong> Unfair hiring practices,
+                gender discrimination, and legal risks.
+              </p>
+              <p class="card-text">
+                <strong>The Solution:</strong> Implemented fairness audits,
+                improved training data diversity, and added human oversight.
+              </p>
+              <p class="card-text">
+                <strong>Key Takeaways:</strong> AI should be regularly tested
+                for bias, and human decision-making should complement automated
+                systems.
+              </p>
+            </div>
+          </div>
         </div>
-      </div>
 
-      <div class="case-study">
-        <h2 class="case-study-title">Case Study Two</h2>
-        <div class="case-study-content">
-          <h3>The Challenge</h3>
-          <p>
-            An AI system in hiring faced accusations of bias against candidates
-            from specific demographics, impacting the fairness of the hiring
-            process.
-          </p>
-          <h3>Potential Harms</h3>
-          <ul>
-            <li>Reduced diversity in the workforce</li>
-            <li>Legal implications for discriminatory practices</li>
-            <li>Negative public perception of the company</li>
-          </ul>
-          <h3>The Solution</h3>
-          <p>
-            Implement regular audits of the AI algorithm and involve diverse
-            teams in the hiring process.
-          </p>
-          <h3>Key Takeaways</h3>
-          <ul>
-            <li>Regularly review AI systems to ensure fairness.</li>
-            <li>Encourage diverse perspectives in algorithm development.</li>
-            <li>Foster transparency in hiring practices.</li>
-          </ul>
+        <!-- Case Study 2 -->
+        <div class="col-md-6 mb-4">
+          <div class="card">
+            <img
+              src="assets/images/img-3.jpg"
+              class="card-img-top"
+              alt="Case Study 2"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Facial Recognition and Privacy</h5>
+              <p class="card-text">
+                <strong>The Challenge:</strong> A government agency deployed
+                facial recognition AI for security but raised concerns about
+                privacy violations.
+              </p>
+              <p class="card-text">
+                <strong>Potential Harms:</strong> Privacy invasion, wrongful
+                identification, and surveillance overreach.
+              </p>
+              <p class="card-text">
+                <strong>The Solution:</strong> Introduced transparency policies,
+                gave users opt-out options, and enforced strict data usage
+                guidelines.
+              </p>
+              <p class="card-text">
+                <strong>Key Takeaways:</strong> AI policies should be
+                transparent, and users should have control over their data.
+              </p>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -190,31 +218,15 @@
       </div>
     </footer>
 
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!-- Dark Mode Toggle Script -->
     <script>
-      // Toggle mobile menu
-      document
-        .querySelector(".menu-toggle")
-        .addEventListener("click", function () {
-          document.querySelector(".nav-links").classList.toggle("active");
-        });
-
-      // Toggle dark/light mode
-      document
-        .querySelector(".theme-toggle")
-        .addEventListener("click", function () {
-          document.body.classList.toggle("light-mode");
-          const icon = this.querySelector("i");
-          if (icon.classList.contains("fa-moon")) {
-            icon.classList.remove("fa-moon");
-            icon.classList.add("fa-sun");
-          } else {
-            icon.classList.remove("fa-sun");
-            icon.classList.add("fa-moon");
-          }
-        });
+      const themeToggle = document.getElementById("theme-toggle");
+      themeToggle.addEventListener("click", () => {
+        document.body.classList.toggle("dark-mode");
+        themeToggle.innerHTML = document.body.classList.contains("dark-mode")
+          ? '<i class="fas fa-sun"></i>'
+          : '<i class="fas fa-moon"></i>';
+      });
     </script>
   </body>
 </html>

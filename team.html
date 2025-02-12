@@ -3,87 +3,248 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Ethica - Case Study</title>
+    <title>Ethica - Resources</title>
 
+    <!-- Bootstrap CSS -->
     <link
       rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
     />
-    <link rel="stylesheet" href="./styles.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
     />
+    <link rel="stylesheet" href="./styles.css" />
+
     <style>
-      .hero {
-        color: #fff;
-        padding: 60px 20px;
-        text-align: center;
+      body.dark-mode {
+        background-color: #1a202c;
+        color: #f7fafc;
       }
-
-      .case-studies {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-        gap: 20px;
-        padding: 40px 20px;
-        max-width: 1200px;
-        margin: 20px auto;
+      .dark-mode .card {
+        background-color: #2d3748;
+        color: #f7fafc;
       }
-
-      .case-study {
-        background: #9d4edd; /* Amethyst */
-        padding: 20px;
-        border-radius: 8px;
-        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      .dark-mode .btn-primary {
+        background-color: #4299e1;
+        border-color: #4299e1;
       }
-
-      .case-study-title {
-        font-size: 28px;
-        margin-bottom: 20px;
-        text-align: center;
-        color: #fff;
+      .card {
+        height: 100%;
       }
-
-      .case-study-content h3 {
-        color: #fff;
-        margin-top: 20px;
+      .card img {
+        height: 200px;
+        object-fit: cover;
       }
-
-      .case-study-content p,
-      .case-study-content ul {
-        color: #fff;
-        line-height: 1.6;
+      .equal-height {
+        display: flex;
+        flex-wrap: wrap;
       }
-
-      .case-study-content ul {
-        padding-left: 20px;
-        list-style-type: disc;
+      .equal-height .col {
+        display: flex;
+      }
+      .equal-height .card {
+        flex-grow: 1;
       }
     </style>
   </head>
-  <body>
-    <header>
-      <div class="container">
+  <body class="bg-gray-100 dark-mode">
+    <!-- Header -->
+    <header class="bg-dark py-3">
+      <div class="container d-flex justify-content-between align-items-center">
+        <a href="index.html" class="logo">
+          <img
+            src="assets/images/white-logo.png"
+            alt="Ethica Logo"
+            height="40"
+          />
+        </a>
         <nav>
-          <a href="index.html" class="logo">
-            <img src="assets/images/white-logo.png" alt="Ethica Logo" />
-          </a>
-          <button class="menu-toggle">
-            <i class="fas fa-bars"></i>
-          </button>
-          <ul class="nav-links">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="principles.html">Principles of Responsible AI</a></li>
-            <li><a href="case-studies.html">Case Studies</a></li>
-            <li><a href="resources.html">Resources</a></li>
-            <li><a href="team.html">About Us</a></li>
+          <ul class="nav">
+            <li class="nav-item">
+              <a href="index.html" class="nav-link text-light">Home</a>
+            </li>
+            <li class="nav-item">
+              <a href="principles.html" class="nav-link text-light"
+                >Principles</a
+              >
+            </li>
+            <li class="nav-item">
+              <a href="case-studies.html" class="nav-link text-light"
+                >Case Studies</a
+              >
+            </li>
+            <li class="nav-item">
+              <a href="resources.html" class="nav-link text-light">Resources</a>
+            </li>
+            <li class="nav-item">
+              <a href="team.html" class="nav-link text-light">About Us</a>
+            </li>
           </ul>
-          <button class="theme-toggle">
-            <i class="fas fa-moon"></i>
-          </button>
         </nav>
+        <button id="theme-toggle" class="btn btn-outline-light">
+          <i class="fas fa-moon"></i>
+        </button>
       </div>
     </header>
+
+    <!-- Hero Section -->
+    <section class="relative text-center text-white">
+      <video autoplay muted loop class="absolute w-full h-full object-cover">
+        <source src="assets/videos/hero-video.mov" type="video/mp4" />
+      </video>
+      <div class="relative bg-black bg-opacity-50 p-20">
+        <h1 class="text-5xl font-bold">Explore AI Ethics Resources</h1>
+        <p class="mt-3 text-lg">
+          Stay informed with the latest research, guidelines, and tools for
+          responsible AI.
+        </p>
+      </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section class="container my-5 text-center">
+      <h2>About Us</h2>
+      <p>
+        Ethica is committed to promoting ethical practices in artificial
+        intelligence. Our team is dedicated to providing resources, research,
+        and insights that ensure responsible AI development and deployment.
+      </p>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats text-center my-5">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4">
+            <h2>2800+</h2>
+            <p>Projects Completed</p>
+          </div>
+          <div class="col-md-4">
+            <h2>140+</h2>
+            <p>Clients Served</p>
+          </div>
+          <div class="col-md-4">
+            <h2>4</h2>
+            <p>Amazing Team Members</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Mission Section -->
+    <section class="mission text-center my-5">
+      <div class="container">
+        <h2>Our Mission</h2>
+        <p>
+          At Ethica, we strive to promote ethical AI practices. Our mission is
+          to provide innovative solutions that ensure fairness, transparency,
+          and accountability in AI technology.
+        </p>
+      </div>
+    </section>
+
+    <!-- Values Section -->
+    <section class="values text-center my-5">
+      <div class="container">
+        <h2>Our Values</h2>
+        <ul class="list-unstyled">
+          <li>Integrity</li>
+          <li>Innovation</li>
+          <li>Collaboration</li>
+          <li>Transparency</li>
+          <li>Excellence</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Team Section -->
+    <section class="container my-5">
+      <h2 class="text-center mb-4">Our Team</h2>
+      <div class="row">
+        <!-- Team Member 1 -->
+        <div class="col-md-3 mb-4">
+          <div class="card team-member">
+            <img
+              src="assets/images/team1.jpg"
+              class="card-img-top"
+              alt="Team Member 1"
+            />
+            <div class="card-body text-center">
+              <h5 class="card-title">Alice Smith</h5>
+              <p class="card-text">AI Ethics Specialist</p>
+              <div class="social-icons">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Team Member 2 -->
+        <div class="col-md-3 mb-4">
+          <div class="card team-member">
+            <img
+              src="assets/images/team2.jpg"
+              class="card-img-top"
+              alt="Team Member 2"
+            />
+            <div class="card-body text-center">
+              <h5 class="card-title">John Doe</h5>
+              <p class="card-text">Data Scientist</p>
+              <div class="social-icons">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Team Member 3 -->
+        <div class="col-md-3 mb-4">
+          <div class="card team-member">
+            <img
+              src="assets/images/team3.jpg"
+              class="card-img-top"
+              alt="Team Member 3"
+            />
+            <div class="card-body text-center">
+              <h5 class="card-title">Emma Johnson</h5>
+              <p class="card-text">Product Manager</p>
+              <div class="social-icons">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Team Member 4 -->
+        <div class="col-md-3 mb-4">
+          <div class="card team-member">
+            <img
+              src="assets/images/team4.jpg"
+              class="card-img-top"
+              alt="Team Member 4"
+            />
+            <div class="card-body text-center">
+              <h5 class="card-title">Michael Brown</h5>
+              <p class="card-text">Software Engineer</p>
+              <div class="social-icons">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <footer>
       <div class="container">
         <div class="footer-content">
@@ -118,31 +279,15 @@
       </div>
     </footer>
 
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!-- Dark Mode Toggle Script -->
     <script>
-      // Toggle mobile menu
-      document
-        .querySelector(".menu-toggle")
-        .addEventListener("click", function () {
-          document.querySelector(".nav-links").classList.toggle("active");
-        });
-
-      // Toggle dark/light mode
-      document
-        .querySelector(".theme-toggle")
-        .addEventListener("click", function () {
-          document.body.classList.toggle("light-mode");
-          const icon = this.querySelector("i");
-          if (icon.classList.contains("fa-moon")) {
-            icon.classList.remove("fa-moon");
-            icon.classList.add("fa-sun");
-          } else {
-            icon.classList.remove("fa-sun");
-            icon.classList.add("fa-moon");
-          }
-        });
+      const themeToggle = document.getElementById("theme-toggle");
+      themeToggle.addEventListener("click", () => {
+        document.body.classList.toggle("dark-mode");
+        themeToggle.innerHTML = document.body.classList.contains("dark-mode")
+          ? '<i class="fas fa-sun"></i>'
+          : '<i class="fas fa-moon"></i>';
+      });
     </script>
   </body>
 </html>
